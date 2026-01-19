@@ -1,0 +1,107 @@
+# ==============================================================================
+# HighStation Public Repository STRATEGIC Ignore Strategy (.gitignore.public)
+# ==============================================================================
+# 목표: 해커톤 심사위원이 "기술적 완성도"를 엿볼 수 있게 하되,
+#       비즈니스 핵심 로직(Proprietary)과 실제 보안 정보는 완벽히 차단함.
+# ==============================================================================
+
+# 1. 환경 설정 및 실비밀번호 (Zero-Tolerance)
+.env*
+!.env.example
+*.key
+*.pem
+private.json
+mnemonic.txt
+.backend.pid
+*.log
+replacements.txt
+.gitignore.*
+
+# 2. 모든 내부 문서 및 히스토리 (Internal Docs)
+docs/
+!docs/public/
+brain/
+*status_report*
+*implementation_plan*
+*walkthrough*
+
+# 3. 비즈니스 핵심 알고리즘 및 민감 코드 (Proprietary & Sensitive)
+# - 플랫폼 기술 자산 보호
+src/services/ScoringService.ts
+src/services/FeeSettlementEngine.ts
+src/services/WithdrawService.ts
+src/services/WithdrawalService.ts
+src/utils/managedWallet.ts      # HD Wallet 유도 로직 (보안상 비공개)
+src/database/db.ts              # DB 연결 설정 (보안상 비공개)
+
+# 4. 인프라, 도구 및 ZK 아티팩트 (Operational Protect)
+scripts/
+sql/
+tests/
+coverage/
+circuits/
+migrations/
+apply_migration.js
+*REPORT_KR.md
+*PLAN_KR.md
+
+# 5. 빌드 결과물 및 로컬 데이터
+node_modules/
+dist/
+build/
+.next/
+.vercel/
+data/
+*.db
+*.sqlite
+*.zkey
+*.wasm
+*.ptau
+*.r1cs
+
+# 6. 대시보드 기밀 정보
+dashboard/.env
+dashboard/src/config.ts
+dashboard/frontend.log
+dashboard/dist/
+dashboard/node_modules/
+
+# ==============================================================================
+# 🔓 공개 허용 범위 (Strategic Openness for Hackathon Judges)
+# ==============================================================================
+# 심사위원이 프로젝트의 "완성도"와 "기술력"을 판단할 수 있는 핵심 파일들:
+
+# - 인프라 및 배포 역량 (DevOps Skills)
+!docker-compose.yml
+!Dockerfile
+!.dockerignore
+!.github/workflows/
+
+# - 데이터베이스 설계 능력 (DB Schema)
+!sql/n100/schema.sql
+
+# - 테스트 품질 및 신뢰성 확인 (Testing Quality)
+!tests/integrity_test.test.ts
+
+# - 현대적 아키텍처 (MCP, Proxy, Verification, Domain Auth)
+!src/services/McpService.ts
+!src/services/ProxyService.ts
+!src/services/DomainVerificationService.ts
+!src/services/PriceService.ts
+!src/services/OpenSealService.ts
+!src/services/ZkVerifier.ts
+
+# - 공개 인터페이스 및 스마트 컨트랙트 (Web3 Stack)
+!src/contracts/
+!src/routes/
+!src/utils/
+!src/database/                  # db.ts를 제외한 폴더 구조는 노출
+!src/middleware/
+
+# - 외부 프로젝트 및 데모 (Integration Examples)
+!easy-ai-agent/
+!dashboard/src/
+
+# - 문서 (Entrance)
+!README.md
+!README_KR.md
