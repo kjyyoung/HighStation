@@ -70,8 +70,9 @@ Refer to the following documents for detailed guides on getting started and veri
 
 ### 👤 Public Service Guides
 - **[Provider Guide](docs/public/PROVIDER_GUIDE_EN.md)**: How to register your API and monetize via x402.
+- **[Code Integrity Support (OpenSeal)](docs/public/OPENSEAL_INTEGRITY_GUIDE_EN.md)**: How to prove code integrity via OpenSeal SDK and register your tag.
 - **[Verification Guide](docs/public/VERIFICATION_GUIDE_EN.md)**: How to verify the ZK and OpenSeal proofs provided by the platform.
-- **[Try with Easy AI Agent](./easy-ai-agent/README.md)**: Experience the HighStation trust layer directly with a CLI agent (no complex setup required).
+- **[Try with Easy AI Agent](./easy-ai-agent/README_EN.md)**: Experience the HighStation trust layer directly with a CLI agent (no complex setup required).
 - **[Agent Integration Guide](docs/public/AGENT_INTEGRATION_GUIDE_EN.md)**: How to integrate the HighStation SDK into your own AI agent.
 
 ---
