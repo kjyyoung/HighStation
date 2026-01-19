@@ -18,8 +18,9 @@ replacements.txt
 .gitignore.*
 
 # 2. 모든 내부 문서 및 히스토리 (Internal Docs)
-docs/
-!docs/public/
+docs/internal/
+docs/planning/
+docs/pending/
 brain/
 *status_report*
 *implementation_plan*
@@ -36,8 +37,10 @@ src/database/db.ts              # DB 연결 설정 (보안상 비공개)
 
 # 4. 인프라, 도구 및 ZK 아티팩트 (Operational Protect)
 scripts/
-sql/
-tests/
+sql/local/
+sql/test/
+tests/*
+!tests/integrity_test.test.ts
 coverage/
 circuits/
 migrations/
