@@ -1,6 +1,6 @@
 # 🔏 OpenSeal 무결성 증명 가이드 (Code Integrity Guide)
 
-HighStation 생태계에서 서비스의 신뢰도를 높이는 가장 강력한 방법은 **OpenSeal**을 통해 소스 코드의 무결성을 증명하는 것입니다. 검증된 서비스는 에이전트 탐색 시 우선순위가 부여되며 "보안 프리미엄" 점수를 획득합니다.
+HighStation 생태계에서 서비스를 등록하기 위해서는 **OpenSeal**을 통한 소스 코드 무결성 증명이 **필수**입니다. 이는 AI 에이전트가 신뢰할 수 있는 서비스만을 이용하도록 보장하는 플랫폼의 핵심 정책입니다.
 
 ## 🏗️ 3단계 통합 프로세스
 
@@ -12,13 +12,13 @@ HighStation 생태계에서 서비스의 신뢰도를 높이는 가장 강력한
 - **보안**: [Provider 가이드](./PROVIDER_GUIDE_KR.md)를 참고하여 IP 화이트리스트 및 HMAC 서명 검증을 적용하십시오.
 
 ### 2. OpenSeal SDK 적용 및 빌드 (Opensealing)
-서비스 코드베이스에 OpenSeal SDK를 연동하고 무결성 해시(Merkle Root)를 생성합니다.
+서비스 코드베이스에 OpenSeal을 적용하고 무결성 해시(Merkle Root)를 생성합니다.
 
-- **SDK 설치**:
+- **CLI 설치**: OpenSeal CLI를 글로벌로 설치합니다.
   ```bash
-  npm install @highstation/openseal-sdk
+  npm install -g openseal-cli
   ```
-- **해시 생성**: `openseal-cli`를 사용하여 프로젝트 루트에서 빌드를 수행합니다.
+- **해시 생성**: 프로젝트 루트에서 빌드를 수행합니다.
   ```bash
   openseal build
   ```

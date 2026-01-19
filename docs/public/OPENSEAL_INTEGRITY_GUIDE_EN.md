@@ -1,6 +1,6 @@
 # 🔏 OpenSeal Code Integrity Guide
 
-The most powerful way to increase trust for your service in the HighStation ecosystem is to prove its code integrity via **OpenSeal**. Verified services receive higher search rankings and a "Security Premium" trust score.
+To register a service on the HighStation ecosystem, proving code integrity via **OpenSeal** is **mandatory**. This is a core platform policy to ensure AI agents only interact with trustworthy, verified services.
 
 ## 🏗️ 3-Step Integration Process
 
@@ -12,13 +12,13 @@ Wrap your core logic into a HighStation-compatible API server to prepare for gat
 - **Security**: Refer to the [Provider Guide](./PROVIDER_GUIDE_EN.md) to implement IP Whitelisting and HMAC Signature Verification.
 
 ### 2. OpenSeal SDK Integration (Opensealing)
-Integrate the OpenSeal SDK into your codebase and generate an integrity hash (Merkle Root).
+Integrate OpenSeal into your codebase and generate an integrity hash (Merkle Root).
 
-- **SDK Install**:
+- **CLI Install**: Install the OpenSeal CLI globally.
   ```bash
-  npm install @highstation/openseal-sdk
+  npm install -g openseal-cli
   ```
-- **Build Hash**: Use `openseal-cli` to perform a build in the project root.
+- **Build Hash**: Run the build command in your project root.
   ```bash
   openseal build
   ```

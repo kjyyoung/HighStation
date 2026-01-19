@@ -2,9 +2,19 @@
 
 **The Trust Layer for AI Agents: ZK & OpenSeal Powered Managed API Gateway**
 
-[🇰🇷 한국어 버전](./README_KR.md)
+[🇰🇷 한국어 버전](./README_KR.md) | 🌐 [Website](https://highstation.net)
 
-HighStation is a **trust-based infrastructure platform** designed for autonomous AI agents in the Cronos ecosystem to use external API services safely and transparently. Moving beyond a simple proxy, we provide the core infrastructure that powers the autonomous AI economy through cryptographic proofs (ZK) and standardized protocols (ERC-8004, x402).
+**"Invisible API servers—on what grounds can you trust them?"**
+
+HighStation ensures **'Trusted API Services'** regardless of the provider by mathematically verifying source code integrity via **OpenSeal**.
+Verified providers can legitimately demand **CRO** payments based on the **x402** protocol in exchange for proving their transparency. HighStation is the AI infrastructure bridging these trust-based autonomous transactions.
+
+---
+
+## 🎥 Demo
+
+<!-- Add Demo Video URL below -->
+*(Demo Video Placeholder)*
 
 ---
 
