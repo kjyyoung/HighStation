@@ -338,7 +338,7 @@ async function main() {
             console.log(chalk.yellow('\n📝 Input Schema / Template:'));
             console.log(chalk.gray(inputTemplate));
 
-            const { payloadStr } = await Enquirer.prompt<{ payloadStr: string }>({
+            let { payloadStr } = await Enquirer.prompt<{ payloadStr: string }>({
                 type: 'input',
                 name: 'payloadStr',
                 message: 'Enter Request Body (JSON):',
